@@ -1,0 +1,24 @@
+name: docusign-base
+synopsis: Low-level bindings to the DocuSign API
+
+library:
+  default-extensions:
+    - DeriveGeneric
+    - GeneralizedNewtypeDeriving
+  dependencies:
+    - aeson
+    - base
+    - bytestring
+    - data-default
+    - http-media
+    - lens
+    - servant
+    - servant-client
+    - text
+  exposed-modules:
+    - DocuSign.Base
+    - DocuSign.Base.Fields
+    - DocuSign.Base.Types
+    - DocuSign.Base.ContentTypes
+  source-dirs:
+    - src
