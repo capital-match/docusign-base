@@ -1,5 +1,5 @@
 name:           docusign-base
-version:        0.0.0
+version:        0.0.1
 synopsis:       Low-level bindings to the DocuSign API
 author:         Jonathan Knowles <mail@jonathanknowles.net>
 maintainer:     dev@capital-match.com
