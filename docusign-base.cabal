@@ -1,6 +1,8 @@
 name:           docusign-base
 version:        0.0.0
 synopsis:       Low-level bindings to the DocuSign API
+author:         Jonathan Knowles <mail@jonathanknowles.net>
+maintainer:     dev@capital-match.com
 license-file:   LICENSE
 build-type:     Simple
 cabal-version:  >= 1.10
