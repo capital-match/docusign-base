@@ -6,23 +6,23 @@ If you're writing Haskell code to connect with DocuSign, we recommend that you s
 
 ## About this package
 
-The contents of this package are largely auto-generated, based on the DocuSign OpenAPI specification, with some minor manual tweaks.
+The contents of this package are mostly auto-generated, based on the DocuSign OpenAPI specification, with some minor manual tweaks.
 
 At the time of writing, the process for generating this package has not yet been automated.
 
 However, it should be possible to reproduce the contents of this package by following the steps below:
 
-1. Install the Swagger CodeGen tool (https://github.com/swagger-api/swagger-codegen)
-2. Download a copy of the DocuSign eSignature REST API specification (https://github.com/docusign/eSign-OpenAPI-Specification/blob/master/esignature.rest.swagger.json)
+1. Install the Swagger CodeGen tool (https://github.com/swagger-api/swagger-codegen).
+2. Download a copy of the DocuSign eSignature REST API specification (https://github.com/docusign/eSign-OpenAPI-Specification/blob/master/esignature.rest.swagger.json).
 3. Use the Swagger CodeGen tool to generate a Haskell language client.
 4. Upgrade `servant` and `servant-client` to the latest version.
 5. Add a standalone `Default` instance to each generated record type.
 
 ## Compiler performance
 
-By default, the Swagger CodeGen tool places all generated Haskell record types into a single module. Due to the sheer size of the DocuSign API, the number of generated record types is very large.
+By default, Swagger CodeGen places all generated Haskell record types into a single module. Due to the sheer size of the DocuSign API, the number of generated record types is very large.
 
-To make it possible to compile the very large number of DocuSign-related record types in parallel (in cases where types have no dependencies with one another), this package places every record type into a separate module. This enables GHC to compile independent types in parallel, potentially saving a huge amount of time when compiling on machines with multiple cores. (At the time of writing, GHC is not able to compile independent parts of a code base in parallel unless those parts are located within separate modules.) To enable parallel compilation, please remember to specify the `-j` GHC compiler option.
+To make it possible to compile the very large number of DocuSign-related record types in parallel (in cases where types have no dependencies with one another), this package places every record type into a **separate module**. This enables GHC to compile independent types **in parallel**, potentially saving a huge amount of time when compiling on machines with multiple cores. (At the time of writing, GHC is not able to compile independent parts of a code base in parallel unless those parts are located within separate modules.) To enable parallel compilation, please remember to specify the `-j` GHC compiler option.
 
 ## Optional parameters
 
