@@ -17,7 +17,7 @@ However, it should be possible to reproduce the contents of this package by foll
 1. Install the [Swagger CodeGen](https://github.com/swagger-api/swagger-codegen) tool.
 2. Download a copy of the [DocuSign eSignature REST API specification](https://github.com/docusign/eSign-OpenAPI-Specification/blob/master/esignature.rest.swagger.json).
 3. Use the Swagger CodeGen tool to generate a Haskell language client.
-4. Upgrade `servant` and `servant-client` packages to the latest versions.
+4. Upgrade `servant` and `servant-client` packages to their latest versions.
 5. Add a standalone [`Default`](http://hackage.haskell.org/package/data-default) instance to each generated record type.
 
 ## Improving compiler performance
