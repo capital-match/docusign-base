@@ -32,4 +32,4 @@ In many places, the DocuSign API documentation indicates that parameters for cer
 
 Unfortunately, this optionality is not always encoded within the official REST API Swagger specification. As a result, when Swagger Codegen is used to generate a Haskell Client for this specification, it produces record types where all fields are required. To rectify this over-strictness, this package makes a further modification, that all fields are marked as optional, using the Haskell `Maybe` type.
 
-The `docusign-client` package defines a safer and more idiomatic Haskell interface to this API, exporting record types that are specific to individual use cases.
+The [`docusign-client`](https://github.com/capital-match/docusign-client) package defines a safer and more idiomatic Haskell interface to this API, exporting record types that are specific to individual use cases.
